@@ -1,0 +1,12 @@
+created: 20151122175632743
+creator: Tobias Beer
+modified: 20151122175811343
+modifier: Tobias Beer
+summary: a tiddlywiki plugin for calculating mathematcal expressions
+tags: 
+title: mklauber/math.js
+type: text/vnd.tiddlywiki
+url: http://www.mklauber.com/mathjs.html
+
+; repo
+: https://github.com/mklauber/tiddly-mathjs
