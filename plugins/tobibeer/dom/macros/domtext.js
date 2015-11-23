@@ -29,9 +29,10 @@ exports.params = [
 Run the macro
 */
 exports.run = function(selector, attr) {
-	var val="",
+	var el,
+		val="",
 		ref = selector,
-		get = function (el) {
+		getText = function (el) {
 			return !el ? "" : (
 				attr ? (
 						attr == "$innerHTML" ?
@@ -40,8 +41,9 @@ exports.run = function(selector, attr) {
 					) : el.textContent || el.innerText
 				).trim();
 		};
-	if(selector){
-		val = get(document.getElementById(ref));
+	if(selector && this.document.getElementById){
+		el = this.document.getElementById(ref);
+		val = getText(el);
 	}
 	return val;
 };

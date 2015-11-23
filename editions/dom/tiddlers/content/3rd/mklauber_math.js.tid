@@ -3,10 +3,8 @@ creator: Tobias Beer
 modified: 20151122175811343
 modifier: Tobias Beer
 summary: a tiddlywiki plugin for calculating mathematcal expressions
-tags: 
 title: mklauber/math.js
-type: text/vnd.tiddlywiki
-url: http://www.mklauber.com/mathjs.html
+url: http://mklauber.github.io/tiddly-mathjs/
 
 ; repo
 : https://github.com/mklauber/tiddly-mathjs
