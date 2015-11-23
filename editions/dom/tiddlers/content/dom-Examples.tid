@@ -9,11 +9,9 @@ type: text/vnd.tiddlywiki
 
 Let's create an element with a unique ''id'':
 
-```
-<p id="foo" class="bar"><i>10</i></p>
-```
-
-> <p id="foo" class="bar"><i>10</i></p>
+; element
+: `<p id="foo" class="bar"><i>10</i></p>`
+:> <p id="foo" class="bar"><i>10</i></p>
 
 Using the ''domtext'' macro you can now retrieve the properties of that element:
 
