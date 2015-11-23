@@ -1,17 +1,18 @@
-created: 20151121104955463
+created: 20151123074344122
 creator: Tobias Beer
-menu: Welcome Examples Versions
-modified: 20151122175647168
+modified: 20151123102015632
 modifier: Tobias Beer
-title: Welcome
+tabs: 
+tags: 
+title: dom-Info
 type: text/vnd.tiddlywiki
 
-This wiki provides the:
+The plugin [[$:/plugins/tobibeer/dom]] provides:
 
-; plugin
-: [[$:/plugins/tobibeer/dom]]
 ; &lt;&lt;domtext>>
 : a macro to read properties of a dom element referenced by a unique id
 :: by default the plain text content of the dom node
 : intended for use with [[mklauber/math.js]]
 :: to retrieve the calculated output of the calc widget
+
+<<plugin-docs-cp dom>>
