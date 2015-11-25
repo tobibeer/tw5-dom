@@ -1,3 +1,6 @@
 title: $:/plugins/tobibeer/dom/readme
 
 Provides the macro `<<domtext id [property]>>`, by default retrieving the text contents for the dom element with a specified id, otherwise returns a specified property.
+
+; documentation / examples / demos...
+: http://tobibeer.github.io/tw5-plugins#dom
