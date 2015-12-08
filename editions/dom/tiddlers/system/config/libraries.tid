@@ -1,0 +1,6 @@
+title: $:/plugins/tobibeer/eval/libraries
+type: application/json
+
+[
+	{"type":"js","id":"js/silent"}
+]

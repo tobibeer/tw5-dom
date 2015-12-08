@@ -3,8 +3,8 @@
     "plugins": [
         "tiddlywiki/tiddlyweb",
         "tiddlywiki/filesystem",
-        "mklauber/math.js",
-        "tobibeer/dom"
+        "tobibeer/dom",
+        "tobibeer/eval"
     ],
     "themes": [
         "tiddlywiki/vanilla",

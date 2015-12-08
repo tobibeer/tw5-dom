@@ -1,6 +1,6 @@
 created: 20151123074344122
 creator: Tobias Beer
-modified: 20151123102015632
+modified: 20151208181353219
 modifier: Tobias Beer
 tabs: 
 tags: 
@@ -12,7 +12,7 @@ The plugin [[$:/plugins/tobibeer/dom]] provides:
 ; &lt;&lt;domtext>>
 : a macro to read properties of a dom element referenced by a unique id
 :: by default the plain text content of the dom node
-: intended for use with [[mklauber/math.js]]
+: intended for use with [[mklauber/math.js|http://mklauber.github.io/tiddly-mathjs/]]
 :: to retrieve the calculated output of the calc widget
 
 <<plugin-docs-cp dom>>
