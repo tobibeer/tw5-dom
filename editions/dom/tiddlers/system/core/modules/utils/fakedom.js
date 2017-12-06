@@ -24,7 +24,7 @@ var bumpSequenceNumber = function(object) {
 
 var TW_TextNode = function(text) {
 	bumpSequenceNumber(this);
-	this.textContent = text;
+	this.textContent = text + "";
 };
 
 Object.defineProperty(TW_TextNode.prototype, "nodeType", {
@@ -67,10 +67,11 @@ TW_Element.prototype.setAttribute = function(name,value) {
 	if(this.isRaw) {
 		throw "Cannot setAttribute on a raw TW_Element";
 	}
-	this.attributes[name] = value;
+	this.attributes[name] = value + "";
 	if(name === "id") {
 		elements[value] = this;
 	}
+
 };
 
 TW_Element.prototype.setAttributeNS = function(namespace,name,value) {
@@ -146,7 +147,7 @@ Object.defineProperty(TW_Element.prototype, "className", {
 		return this.attributes["class"] || "";
 	},
 	set: function(value) {
-		this.attributes["class"] = value;
+		this.attributes["class"] = value + "";
 	}
 });
 
@@ -155,7 +156,7 @@ Object.defineProperty(TW_Element.prototype, "value", {
 		return this.attributes.value || "";
 	},
 	set: function(value) {
-		this.attributes.value = value;
+		this.attributes.value = value + "";
 	}
 });
 
@@ -213,13 +214,28 @@ Object.defineProperty(TW_Element.prototype, "innerHTML", {
 	set: function(value) {
 		this.isRaw = true;
 		this.rawHTML = value;
+		this.rawTextContent = null;
+	}
+});
+
+Object.defineProperty(TW_Element.prototype, "textInnerHTML", {
+	set: function(value) {
+		if(this.isRaw) {
+			this.rawTextContent = value;
+		} else {
+			throw "Cannot set textInnerHTML of a non-raw TW_Element";
+		}
 	}
 });
 
 Object.defineProperty(TW_Element.prototype, "textContent", {
 	get: function() {
 		if(this.isRaw) {
-			throw "Cannot get textContent on a raw TW_Element";
+			if(this.rawTextContent === null) {
+				return "";
+			} else {
+				return this.rawTextContent;
+			}
 		} else {
 			var b = [];
 			$tw.utils.each(this.children,function(node) {
@@ -236,7 +252,7 @@ Object.defineProperty(TW_Element.prototype, "textContent", {
 Object.defineProperty(TW_Element.prototype, "formattedTextContent", {
 	get: function() {
 		if(this.isRaw) {
-			throw "Cannot get formattedTextContent on a raw TW_Element";
+			return "";
 		} else {
 			var b = [],
 				isBlock = $tw.config.htmlBlockElements.indexOf(this.tag) !== -1;
